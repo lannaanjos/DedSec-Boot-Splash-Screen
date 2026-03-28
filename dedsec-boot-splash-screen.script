@@ -4,6 +4,13 @@ Window.SetBackgroundBottomColor(0.0, 0.0, 0.0);
 
 // carregando e centralizando img
 logo.image = Image("EYEBALL.png"); // verifique pasta de imagens para escolher um
+
+// ajjustando tamanho 
+scaled_width = logo.image.GetWidth() * 0.25;
+scaled_height = logo.image.GetHeight() * 0.25;
+
+logo.image = logo.image.Scale(scaled_width, scaled_height);
+
 logo.sprite = Sprite(logo.image);
 
 screen_width = Window.GetWidth();
