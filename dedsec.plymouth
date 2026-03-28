@@ -3,5 +3,5 @@ Name=DedSec_Boot_Splash_Screen
 Description=DedSec Themed BSS made iwht fan kit images
 
 [script]
-ImageDir=/usr/share/plymouth/themes/dedsec-boot-splashscreen/
+ImageDir=/usr/share/plymouth/themes/dedsec-boot-splashscreen/images
 ScriptFile-=/usr/share/plymouth/themes/dedsec-boot-splashscreen/dedsec.script
