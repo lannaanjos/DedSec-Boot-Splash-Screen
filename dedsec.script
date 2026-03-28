@@ -1,0 +1,37 @@
+// fundo preto
+Window.SetBackgroundTopColor(0.0, 0.0, 0.0);
+Window.SetBackgroundBottomColor(0.0, 0.0, 0.0,);
+
+// carregando e centralizando img
+logo.image = Image("EYEBALL.png");
+logo.sprite = Sprite(logo.image);
+
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+logo.sprite.SetX((screen_width - logo.image.GetWidth()) / 2);
+logo.sprite.SetY((screen_height - logo.image.GetHeight()) / 2);
+
+// animação rodando
+angle = 0;
+
+fun refresh(){
+    // aumenta a rotação em 5 graus toda vez q é chamado
+    angle = angle + 5;
+
+    // reseta p 0 toda vez q vai p 360 graus p n ficar crescendo e despediçando memoria em boots longos
+    if (angle>=360) angle = 0;
+
+    // roda a imagem
+    rotacionado = logo.image.Rotate(angle * 3.14159 / 180);
+    logo.sprite.SetImage(rotacionado);
+
+    // centraliza a imagem dnv pra ela n ficar woblando
+    logo.sprite.SetX((screen_width - rotacionado.GetWidth()) / 2);
+    logo.sprite.SetY((screen_height - rotacionado.GetHeight()) / 2);
+
+  }
+
+// pmth chama essa função várias vezes po segundo ent tudo dentro é atualizado continuamente
+Plymouth.SetRefreshFuncion(refresh);
+
