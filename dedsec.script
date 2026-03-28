@@ -3,7 +3,7 @@ Window.SetBackgroundTopColor(0.0, 0.0, 0.0);
 Window.SetBackgroundBottomColor(0.0, 0.0, 0.0);
 
 // carregando e centralizando img
-logo.image = Image("EYEBALL.png");
+logo.image = Image("EYEBALL.png"); // verifique pasta de imagens para escolher um
 logo.sprite = Sprite(logo.image);
 
 screen_width = Window.GetWidth();
